@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreActivity">
+
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="home"
+        android:text="🏠"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scoreView"
+        app:layout_constraintEnd_toStartOf="@+id/scoreView" />
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Skorlar"
+        android:textAlignment="center"
+        android:textColor="#1109F6"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team1NameView"
+        android:layout_width="133dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:text="1.Takım"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="30sp"
+        android:autoSizeMinTextSize="18sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#E60A0A"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreView" />
+
+    <TextView
+        android:id="@+id/team2NameView"
+        android:layout_width="133dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:text="2.Takım"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="30sp"
+        android:autoSizeMinTextSize="18sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#E60A0A"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/scoreView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreView" />
+
+    <TextView
+        android:id="@+id/dogru1ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Doğru: 0"
+        android:textAlignment="center"
+        android:textColor="#55BF0A"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/team1NameView"
+        app:layout_constraintTop_toBottomOf="@+id/team1NameView" />
+
+    <TextView
+        android:id="@+id/dogru2ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Doğru: 0"
+        android:textAlignment="center"
+        android:textColor="#55BF0A"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/team2NameView"
+        app:layout_constraintTop_toBottomOf="@+id/team2NameView" />
+
+    <TextView
+        android:id="@+id/tabu1ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Tabu: 0"
+        android:textAlignment="center"
+        android:textColor="#EF1717"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/dogru1ScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/dogru1ScoreView" />
+
+    <TextView
+        android:id="@+id/tabu2ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Tabu: 0"
+        android:textAlignment="center"
+        android:textColor="#EF1717"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/dogru2ScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/dogru2ScoreView" />
+
+    <TextView
+        android:id="@+id/pas1ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Pas: 0"
+        android:textAlignment="center"
+        android:textColor="#C8C40B"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tabu1ScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/tabu1ScoreView" />
+
+    <TextView
+        android:id="@+id/pas2ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Pas: 0"
+        android:textAlignment="center"
+        android:textColor="#C8C40B"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/tabu2ScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/tabu2ScoreView" />
+
+    <TextView
+        android:id="@+id/sonuc1ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Skor: 0"
+        android:textAlignment="center"
+        android:textColor="#1109F6"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/pas1ScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/pas1ScoreView" />
+
+    <TextView
+        android:id="@+id/sonuc2ScoreView"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:text="Skor: 0"
+        android:textAlignment="center"
+        android:textColor="#1109F6"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@+id/pas2ScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/pas2ScoreView" />
+
+
+    <TextView
+        android:id="@+id/gameResultView"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
+        android:text="Oyun Sonucu"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="28sp"
+        android:autoSizeMinTextSize="18sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#EF1717"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"> </TextView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:layout_marginTop="570dp"
+        android:onClick="continueGame"
+        android:text="Devam Et"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
